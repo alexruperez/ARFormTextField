@@ -1,26 +1,72 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4451" systemVersion="13A461" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4514" systemVersion="13B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3676"/>
+        <deployment defaultVersion="1536" identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3747"/>
     </dependencies>
     <scenes>
-        <!--class Prefix:identifier View Controller-->
+        <!--View Controller-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
                 <viewController id="vXZ-lx-hvc" customClass="ARViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="UIY-b6-IMM"/>
+                        <viewControllerLayoutGuide type="bottom" id="a28-aS-bbg"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Next" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9Lz-us-AIM" customClass="ARFormTextField">
+                                <rect key="frame" x="20" y="40" width="280" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="next"/>
+                                <connections>
+                                    <outlet property="nextTextField" destination="SSF-Ti-5YF" id="uUe-Bw-wzq"/>
+                                </connections>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Next" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SSF-Ti-5YF" customClass="ARFormTextField">
+                                <rect key="frame" x="20" y="78" width="280" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="next"/>
+                                <connections>
+                                    <outlet property="nextTextField" destination="06u-Ta-xJO" id="IeB-9q-5vv"/>
+                                </connections>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Done" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="06u-Ta-xJO" customClass="ARFormTextField">
+                                <rect key="frame" x="20" y="116" width="280" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                            </textField>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="9Lz-us-AIM" firstAttribute="top" secondItem="UIY-b6-IMM" secondAttribute="bottom" constant="20" id="DnL-rO-UD1"/>
+                            <constraint firstAttribute="trailing" secondItem="9Lz-us-AIM" secondAttribute="trailing" constant="20" symbolic="YES" id="X89-CX-umV"/>
+                            <constraint firstItem="9Lz-us-AIM" firstAttribute="trailing" secondItem="SSF-Ti-5YF" secondAttribute="trailing" id="XJp-kp-1yr"/>
+                            <constraint firstItem="06u-Ta-xJO" firstAttribute="leading" secondItem="SSF-Ti-5YF" secondAttribute="leading" id="d4A-RU-2xm"/>
+                            <constraint firstItem="06u-Ta-xJO" firstAttribute="top" secondItem="SSF-Ti-5YF" secondAttribute="bottom" constant="8" symbolic="YES" id="gWQ-DD-mZa"/>
+                            <constraint firstItem="9Lz-us-AIM" firstAttribute="leading" secondItem="SSF-Ti-5YF" secondAttribute="leading" id="iz7-aU-79k"/>
+                            <constraint firstItem="SSF-Ti-5YF" firstAttribute="top" secondItem="9Lz-us-AIM" secondAttribute="bottom" constant="8" symbolic="YES" id="mN1-jD-L3Y"/>
+                            <constraint firstItem="9Lz-us-AIM" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="20" symbolic="YES" id="rT4-Hm-SJu"/>
+                            <constraint firstItem="06u-Ta-xJO" firstAttribute="trailing" secondItem="SSF-Ti-5YF" secondAttribute="trailing" id="wEF-Cr-6gs"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="doneFormTextField" destination="06u-Ta-xJO" id="l1p-dm-cjB"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="120" y="111"/>
         </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
-        <simulatedScreenMetrics key="destination" type="retina4"/>
+        <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
 </document>

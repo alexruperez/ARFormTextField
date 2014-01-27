@@ -7,43 +7,22 @@
 //
 
 #import "ARViewController.h"
+#import "ARFormTextField.h"
 
 @interface ARViewController ()
+
+@property (weak, nonatomic) IBOutlet ARFormTextField *doneFormTextField;
 
 @end
 
 @implementation ARViewController
 
-#pragma mark - UIViewController
-
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-}
-
-- (void)viewWillAppear:(BOOL)animated
-{
-    [super viewWillAppear:animated];
-}
-
-- (void)viewDidAppear:(BOOL)animated
-{
-    [super viewDidAppear:animated];
-}
-
-- (void)viewWillDisappear:(BOOL)animated
-{
-	[super viewWillDisappear:animated];
-}
-
-- (void)viewDidDisappear:(BOOL)animated
-{
-	[super viewDidDisappear:animated];
-}
-
-- (void)viewDidUnload
-{
-    [super viewDidUnload];
+    [self.doneFormTextField setDoneBlock:^(ARFormTextField *formTextField) {
+        [[[UIAlertView alloc] initWithTitle:@"Done!" message:nil delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles:nil] show];
+    }];
 }
 
 @end

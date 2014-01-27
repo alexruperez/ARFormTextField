@@ -21,6 +21,7 @@
 		D5BAD11E189661BF0025604B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5BAD100189661BF0025604B /* UIKit.framework */; };
 		D5BAD126189661BF0025604B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D5BAD124189661BF0025604B /* InfoPlist.strings */; };
 		D5BAD128189661BF0025604B /* FormTextFieldTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D5BAD127189661BF0025604B /* FormTextFieldTests.m */; };
+		D5BAD1341896620B0025604B /* ARFormTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = D5BAD1331896620B0025604B /* ARFormTextField.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,8 @@
 		D5BAD123189661BF0025604B /* FormTextFieldTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "FormTextFieldTests-Info.plist"; sourceTree = "<group>"; };
 		D5BAD125189661BF0025604B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		D5BAD127189661BF0025604B /* FormTextFieldTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FormTextFieldTests.m; sourceTree = "<group>"; };
+		D5BAD1321896620B0025604B /* ARFormTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ARFormTextField.h; path = ARFormTextField/ARFormTextField.h; sourceTree = "<group>"; };
+		D5BAD1331896620B0025604B /* ARFormTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ARFormTextField.m; path = ARFormTextField/ARFormTextField.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,7 +85,8 @@
 		D5BAD0F0189661BF0025604B = {
 			isa = PBXGroup;
 			children = (
-				D5BAD102189661BF0025604B /* FormTextField */,
+				D5BAD131189661D30025604B /* ARFormTextField */,
+				D5BAD102189661BF0025604B /* FormTextFieldDemo */,
 				D5BAD121189661BF0025604B /* FormTextFieldTests */,
 				D5BAD0FB189661BF0025604B /* Frameworks */,
 				D5BAD0FA189661BF0025604B /* Products */,
@@ -109,7 +113,7 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		D5BAD102189661BF0025604B /* FormTextField */ = {
+		D5BAD102189661BF0025604B /* FormTextFieldDemo */ = {
 			isa = PBXGroup;
 			children = (
 				D5BAD10B189661BF0025604B /* ARAppDelegate.h */,
@@ -120,6 +124,7 @@
 				D5BAD114189661BF0025604B /* Images.xcassets */,
 				D5BAD103189661BF0025604B /* Supporting Files */,
 			);
+			name = FormTextFieldDemo;
 			path = FormTextField;
 			sourceTree = "<group>";
 		};
@@ -150,6 +155,15 @@
 				D5BAD124189661BF0025604B /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		D5BAD131189661D30025604B /* ARFormTextField */ = {
+			isa = PBXGroup;
+			children = (
+				D5BAD1321896620B0025604B /* ARFormTextField.h */,
+				D5BAD1331896620B0025604B /* ARFormTextField.m */,
+			);
+			name = ARFormTextField;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -250,6 +264,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D5BAD1341896620B0025604B /* ARFormTextField.m in Sources */,
 				D5BAD109189661BF0025604B /* main.m in Sources */,
 				D5BAD110189661BF0025604B /* ARViewController.m in Sources */,
 				D5BAD10D189661BF0025604B /* ARAppDelegate.m in Sources */,
@@ -384,6 +399,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "FormTextField/FormTextField-Prefix.pch";
 				INFOPLIST_FILE = "FormTextField/FormTextField-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -397,6 +413,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "FormTextField/FormTextField-Prefix.pch";
 				INFOPLIST_FILE = "FormTextField/FormTextField-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
